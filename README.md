@@ -7,11 +7,11 @@ Desafio SAUDE APP - aplicação teste.
 Tabela de conteúdos
 =================
 <!--ts-->
-   * [Instalação e configuração](## Instalação e configuração)
-   * [Features](## Features)
+   * [Instalação e configuração](#Instalação e configuração)
+   * [Features](#Features)
 <!--te-->
 
-## Instalação e configuração
+### Instalação e configuração
 
 Acessar os diretório principal do código-fonte e executar os seguintes comandos:
 
@@ -20,7 +20,7 @@ Acessar os diretório principal do código-fonte e executar os seguintes comando
 docker network create saude-net
 ```
 
-2 - Executar container da database H2
+2 - Executar container da database H2, deve ser criada um pasta chamada h2-data (arquivo do db será armazenado)
 ```
 docker run -d --net saude-net -p 127.0.0.1:1521:1521 -p 127.0.0.1:81:81 -v h2-data:/opt/h2-data -e H2_OPTIONS=-ifNotExists --name=MyH2Instance oscarfonts/h2
 ```
