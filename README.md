@@ -25,19 +25,24 @@ docker network create saude-net
 docker run -d --net saude-net -p 127.0.0.1:1521:1521 -p 127.0.0.1:81:81 -v h2-data:/opt/h2-data -e H2_OPTIONS=-ifNotExists --name=MyH2Instance oscarfonts/h2
 ```
 
-3 - Gerar o pacote .war da aplicação
+3 - Executar scripts do Liquibase
+```
+mvn liquibase:update
+```
+
+4 - Gerar o pacote .war da aplicação
 ```
 mvn package -f pom.xml
 ```
 
 Obs.: Será gerada uma pasta /target. Nesta pasta está o pacote .war
 
-4 - Executar o build da imagem do servidor com a aplicação
+5 - Executar o build da imagem do servidor com a aplicação
 ```
 docker build --tag=wildfly-app .
 ```
 
-5 - Executar a aplicação
+6 - Executar a aplicação
 ```
 docker run -it --net saude-net -p 127.0.0.1:8080:8080 wildfly-app
 ```
