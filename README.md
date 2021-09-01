@@ -7,7 +7,7 @@ Desafio SAUDE APP - aplicação teste.
 Tabela de conteúdos
 =================
 <!--ts-->
-   * [Instalaç ão e configuração](##Instalação e configuração)
+   * [Instalação e configuração](##Instalação e configuração)
    * [Features](##Features)
 <!--te-->
 
