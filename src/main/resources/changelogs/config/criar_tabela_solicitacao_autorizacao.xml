@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="andre.santana" id="tarefa-02-solic">
+        <createTable tableName="solicitacao_autorizacao">
+            <column name="id_solicitacao" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="id_procedimento" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="idade" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sexo" type="char(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <rollback>
+            <dropTable tableName="solicitacao_autorizacao"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet author="andre.santana" id="autoincremente-solic">
+        <addAutoIncrement columnDataType="int"
+                          columnName="id_solicitacao"
+                          incrementBy="1"
+                          startWith="0"
+                          tableName="solicitacao_autorizacao"/>
+    </changeSet>
+</databaseChangeLog>

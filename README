@@ -1,0 +1,27 @@
+# Saude APP
+
+## Introdução
+
+Desafio SAUDE APP - aplicação teste.
+
+Tabela de conteúdos
+=================
+<!--ts-->
+   * [Instalação e configuração](## Instalação e configuração)
+   * [Como usar](#como-usar)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tests](#testes)
+   * [Tecnologias](#tecnologias)
+<!--te-->
+
+## Instalação e configuração
+
+> You've gotten their attention in the introduction, now show a few code examples. So they get a visualization and as a bonus, make them copy/paste friendly.
+
+## Installation
+
+> The installation instructions are low priority in the readme and should come at the bottom. The first part answers all their objections and now that they want to use it, show them how.
